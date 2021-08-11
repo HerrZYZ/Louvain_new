@@ -7,7 +7,7 @@ from scipy.sparse import csr_matrix
 df_nodeedge = pd.read_csv('undirected_training_graph_numeric.csv')
 
 # print (df_nodeedge)
-louvain = Louvain( resolution=-2, modularity='newman', n_aggregations=-1, shuffle_nodes= True, verbose=True,return_aggregate= True)
+louvain = Louvain( resolution=1, modularity='newman', verbose=True)
 
 df_from=df_nodeedge['from_address']
 df_to=df_nodeedge['to_address']
